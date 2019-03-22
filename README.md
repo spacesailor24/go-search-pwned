@@ -8,9 +8,9 @@ There's an awesome video about how it works and why it's secure [Here](https://w
 
 [haveibeenpwned's](https://haveibeenpwned.com) API only uses the first 5 characters of the **SHA1 hash** of your password and returns all known hashes the share the first 5 characters
 
-So the only part of this process which has access to your whole password is the Go script I've written
+The only part of this process which has access to your whole password is the Go script I've written
 
-So why should you trust me? **Don't**, in fact, **PLEASE DON'T**
+Why should you trust me? **Don't**, in fact, **PLEASE DON'T**
 
 I encourage you to review and compile the source code yourself, or even build your own implementation of this tool
 
