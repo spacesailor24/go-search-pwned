@@ -60,9 +60,9 @@ func pwnedLookupApi(pwdHash string) string {
 func searchRespForHashHex(resp string, pwdHashHex string) bool {
 	minus5Chars := string(pwdHashHex[5:])
 	for _, s := range strings.Split(resp, "\r\n") {
-		foo := strings.Split(s, ":")
-		if foo[0] == strings.ToUpper(minus5Chars) {
-			fmt.Println(fmt.Sprintf("Your password has been leaked %s times", foo[1]))
+		apiHashHex := strings.Split(s, ":")
+		if apiHashHex[0] == strings.ToUpper(minus5Chars) {
+			fmt.Println(fmt.Sprintf("Your password has been leaked %s times", apiHashHex[1]))
 
 			return true
 		}
