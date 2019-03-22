@@ -14,7 +14,7 @@ Why should you trust me? **Don't**, in fact, **PLEASE DON'T**
 
 I encourage you to review and compile the source code yourself, or even build your own implementation of this tool
 
-However, after reviewing the source code, you'll see that the script is just hashing the password for you, chopping of the first 5 characters, `POST`ing them to [haveibeenpwned's](https://haveibeenpwned.com) API, and search the response for the full hash of your password
+However, after reviewing the source code, you'll see that the script is just hashing the password for you, chopping of the first 5 characters, `POST`ing them to [haveibeenpwned's](https://haveibeenpwned.com) API, searching the response for the full hash of your password, and telling whether or not the full hash of your password was found in their leaked password database
 
 No where am I sending off or storing your plain text password
 
