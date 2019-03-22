@@ -4,6 +4,20 @@ This utility uses [haveibeenpwned's](https://haveibeenpwned.com) API to search t
 
 There's an awesome video about how it works and why it's secure [Here](https://www.youtube.com/watch?v=hhUb5iknVJs)
 
+## TL;DR Of Why It's Secure
+
+[haveibeenpwned's](https://haveibeenpwned.com) API only uses the first 5 characters of the **SHA1 hash** of your password and returns all known hashes the share the first 5 characters
+
+So the only part of this process which has access to your whole password is the Go script I've written
+
+So why should you trust me? **Don't**, in fact, **PLEASE DON'T**
+
+I encourage you to review and compile the source code yourself, or even build your own implementation of this tool
+
+However, after reviewing the source code, you'll see that the script is just hashing the password for you, chopping of the first 5 characters, `POST`ing them to [haveibeenpwned's](https://haveibeenpwned.com) API, and search the response for the full hash of your password
+
+No where am I sending off or storing your plain text password
+
 ## How to Use
 
 I've compiled three Go binaries for OSX, Windows, and Linux all for the `amd64` architecture
